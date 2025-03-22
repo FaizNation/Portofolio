@@ -76,6 +76,7 @@ button:active {
 section {
     width: 100%;
     height: 686px;
+    top: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -138,7 +139,9 @@ section {
 }
 
 .kanan {
+    position: relative;
     display: flex;
+    top: 40px;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -146,17 +149,14 @@ section {
 }
 
 .gambar img {
-    width: 40vw;
-    box-shadow: 0 0 25px var(--main-color);
+    width: 32vw;
     cursor: pointer;
     animation: floatImage 4s ease-in-out infinite;
     transition: 0.4s ease;
 }
 
 .gambar img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-        0 0 35px var(--main-color),
-        0 0 45px var(--main-color);
+    transform: scale(1.05);
 }
 
 @keyframes floatImage {
@@ -182,5 +182,268 @@ section {
 
 .social-media span:hover {
     transform: scale(1.2) translateY(-10px);
-    box-shadow: 0 0 25px var(--main-color);
+}
+
+.about {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutkiri {
+    position: relative;
+    left: -50px;
+    width: 100vw;
+    cursor: pointer;
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.aboutkanan {
+    position: relative;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.titleabout {
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.descabout {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 3px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.allskills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Service Section */
+section .service {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* Title Service */
+.titleservice {
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.descserivice {
+    font-size: 21px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+/* Service Container */
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for Service Cards */
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 400%;
+    max-width: 1200px;
+}
+
+/* Service Card */
+.service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 400px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Card Image */
+.service-card img {
+    width: 75px;
+    height: 75px;
+}
+
+/* Card Title */
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Card Description */
+.service-card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .service-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%;
+    }
+}
+
+.project {
+    position: relative;
+    top: 150px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: auto;
+}
+
+/* Title */
+.titleproject {
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+/* Deskripsi */
+.descproject p {
+    max-width: 50%;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+/* Filter Buttons */
+.bttn-skill {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.bttn-skill button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #191919;
+    border-radius: 25px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border: 2px solid #ddd;
+}
+
+/* Hover Effect */
+.bttn-skill button:hover {
+    background: #f4f4f4;
+}
+
+/* Selected (Active) Button */
+.bttn-skill button:nth-child(3) {
+    /* Web Design sebagai default */
+    background: #ff7f00;
+    color: white;
+    border-color: #ff7f00;
+}
+
+/* Project Grid */
+.workwebdesign {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Project Card */
+.work {
+    /* background: #f8f8f8; */
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: 0.3s;
+}
+
+/* Project Image */
+.work img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Hover Effect */
+.work:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Category */
+.category {
+    font-size: 14px;
+    color: #ff7f00;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .workwebdesign {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .workwebdesign {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
