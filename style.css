@@ -7,10 +7,11 @@ html {
 
 body {
     font-family: 'poppins', sans-serif;
-    padding: 1rem 9rem;
+
 }
 
 Nav {
+    padding: 1rem 9rem;
     display: flex;
     justify-content: space-between;
 }
@@ -36,6 +37,7 @@ Nav ul li a {
     text-decoration: none;
     color: #191919;
     font-weight: 600;
+    font-size: 21px;
     padding: 8px 0;
     transition: all;
     transition-duration: 300ms;
@@ -43,6 +45,7 @@ Nav ul li a {
 }
 
 Nav ul li a:hover {
+    text-decoration: none;
     color: #FD6F00;
     border-bottom: 1px solid #FD6F00;
 
@@ -73,7 +76,16 @@ button:active {
     transform: scale(0.95);
 }
 
-.home {
+#icon-menu {
+    font-size: 3.6rem;
+    color: #e65c00;
+    cursor: pointer;
+    display: none;
+
+}
+
+#home {
+    padding: 1rem 9rem;
     width: 100%;
     height: 686px;
     top: 30px;
@@ -184,8 +196,9 @@ button:active {
     transform: scale(1.2) translateY(-10px);
 }
 
-.about {
+#about {
     margin: 5rem 0;
+    padding: 1rem 9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -236,7 +249,7 @@ button:active {
 }
 
 /* Service Section */
-.service {
+#service {
     width: 80%;
     text-align: center;
     margin: auto;
@@ -331,7 +344,8 @@ button:active {
     }
 }
 
-.project {
+#project {
+    padding: 1rem 9rem;
     position: relative;
     top: 150px;
     width: 100%;
@@ -364,6 +378,7 @@ button:active {
 /* Filter Buttons */
 .bttn-skill {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-bottom: 40px;
@@ -374,8 +389,8 @@ button:active {
     padding: 12px 24px;
     font-size: 16px;
     font-weight: 600;
-    color: #191919;
     border-radius: 25px;
+    color: #191919;
     background: #fff;
     cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -383,23 +398,14 @@ button:active {
     border: 2px solid #ddd;
 }
 
-/* Hover Effect */
-.bttn-skill button:hover {
-    background: #f4f4f4;
-}
-
-/* Selected (Active) Button */
-.bttn-skill button:nth-child(3) {
-    /* Web Design sebagai default */
+.bttn-skill .active {
     background: #ff7f00;
     color: white;
-    border-color: #ff7f00;
 }
 
 /* Project Grid */
 .workwebdesign {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 25px;
     padding: 20px;
     justify-content: center;
@@ -408,6 +414,8 @@ button:active {
 /* Project Card */
 .work {
     /* background: #f8f8f8; */
+    flex-grow: 1;
+    flex-basis: 300px;
     border-radius: 15px;
     overflow: hidden;
     padding: 15px;
@@ -462,7 +470,8 @@ button:active {
     text-align: center;
 }
 
-.testimonial{
+.testimonial {
+    overflow: hidden;
     position: relative;
     top: 350px;
     padding: 5rem 0;
@@ -471,71 +480,6 @@ button:active {
     justify-content: center;
     align-items: center;
     gap: 60px;
-}
-.testimonial .testimonialWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    overflow: hidden;
-}
-.testimonial .testimonialBox{
-    width: 1020px;
-    height: 300px;
-    padding: 0 20px;
-    background-color: #F8F8F8;
-    border-radius: 14px;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    -ms-border-radius: 14px;
-    -o-border-radius: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.testimonial .text{
-    width: 700px;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    gap: 10px;
-}
-.testimonial .text p{
-    font-size: 21px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #424242;
-}
-.own h3:nth-child(2){
-    font-size: 19px;
-    font-weight: 300;
-}
-.testimonial .blurry{
-    opacity: 20%;
-}
-.testimonial .slideWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.testimonial .slider{
-    background-color: #D9D9D9;
-    width: 57px;
-    height: 16px;
-    border-radius: 18px;
-    -webkit-border-radius: 18px;
-    -moz-border-radius: 18px;
-    -ms-border-radius: 18px;
-    -o-border-radius: 18px;
-}
-.testimonial .slider:nth-child(2){
-    background-color: #FD6F00;
 }
 
 .subscribe {
@@ -550,12 +494,15 @@ button:active {
 }
 
 .subscribe .subsInput {
+    position: relative;
+    top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.subscribe input{
+
+.subscribe input {
     background-color: #F8F8F8;
     width: 627px;
     height: 75px;
@@ -571,7 +518,8 @@ button:active {
     font-size: 21px;
     font-weight: 400;
 }
-.subscribe button{
+
+.subscribe button {
     width: 200px;
     height: 75px;
     padding: 0 20px;
@@ -582,10 +530,10 @@ button:active {
     -moz-border-radius: 14px;
     -ms-border-radius: 14px;
     -o-border-radius: 14px;
-    outline:  none;
+    outline: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -593,7 +541,7 @@ button:active {
 .footer {
     position: relative;
     top: 380px;
-    height: 480px;
+    height: 580px;
     background-color: #F8F8F8;
     display: flex;
     flex-direction: column;
@@ -601,10 +549,11 @@ button:active {
     align-items: center;
     padding-top: 7rem;
 }
-.footer .logo{
+
+.footer .logo {
     width: 260px;
     cursor: pointer;
-    transition: 0,3s ease;
+    transition: 0, 3s ease;
 
 }
 
@@ -624,6 +573,7 @@ button:active {
     position: relative;
     top: 80px;
 }
+
 .footer ul li {
     list-style: none;
     font-size: 21px;
@@ -641,28 +591,167 @@ button:active {
     padding: 8px 0;
     transition: all;
     transition-duration: 300ms;
-    border-bottom: 1px solid #fd6e0000; 
+    border-bottom: 1px solid #fd6e0000;
 }
 
-.footer ul li a:hover{
-    color:#FD6F00;
+.footer ul li a:hover {
+    color: #FD6F00;
     border-bottom: 1px solid #FD6F00;
 }
 
 
 .footer .copyright {
     position: relative;
-    top: 120px;
+    top: 80px;
     width: 100%;
     background-color: #545454;
     padding: 20px 0;
     text-align: center;
 }
-.footer .copyright h1{
+
+.footer .copyright h1 {
     font-size: 21px;
     font-weight: 500;
     color: white;
 }
-.footer .copyright span{
-    color:#FD6F00;
+
+.footer .copyright span {
+    color: #FD6F00;
+}
+
+.shadow-effect {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #ECECEC;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+#customers-testimonials .shadow-effect h3 {
+    width: 700px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    font-weight: 600;
+}
+
+#customers-testimonials .shadow-effect h4 {
+    width: 700px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+#customers-testimonials .shadow-effect p {
+    font-size: 18px;
+    justify-content: start;
+    align-items: start;
+    line-height: 1.5;
+    margin: 0 0 17px 0;
+    color: #424242;
+}
+
+.quote-icon {
+    font-size: 40px;
+    /* Sesuaikan ukuran */
+    color: #FFA500;
+    /* Warna kuning-oranye */
+    font-weight: bold;
+}
+
+.quote-left {
+    position: relative;
+    left: -110px;
+    top: 30px;
+    margin-right: 10px;
+}
+
+.quote-right {
+    position: relative;
+    left: 110px;
+    top: -55px;
+    margin-left: 10px;
+}
+
+
+
+#customers-testimonials .item {
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 80px;
+    opacity: .2;
+    transform: scale3d(0.8, 0.8, 1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    transform: scale3d(1.0, 1.0, 1);
+    overflow: hidden;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 90px;
+    margin: 0 auto 17px;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #ff7f00;
+    transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+
+#customers-testimonials.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+    display: inline-block;
+
+    margin: 0 2px 5px;
+    transform: translate3d(0px, -50%, 0px) scale(0.3);
+    transform-origin: 50% 50% 0;
+    transition: all 250ms ease-out 0s;
+
+
+    background-color: #D9D9D9;
+    width: 57px;
+    height: 16px;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .service-card {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    #home {
+        flex-direction: column;
+    }
 }
